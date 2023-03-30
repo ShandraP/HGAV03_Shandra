@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "14f7ac30-3888-426a-a39f-e88ecdf8027b",
+		"name": "API-HGVA-webcartografie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PDOK locatie server - Suggest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/suggest?q=soesterberg&rows=10",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pdok",
+						"nl"
+					],
+					"path": [
+						"bzk",
+						"locatieserver",
+						"search",
+						"v3_1",
+						"suggest"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "soesterberg",
+							"description": "Vrij zoek veld, vul hier in wat je wilt"
+						},
+						{
+							"key": "rows",
+							"value": "10",
+							"description": "Het aantal suggesties die terug komen\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PDOK locatieserver - Lookup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/lookup?id=gem-dfe54055dcbdbd4afb63e7281f35d792&wt=json&fl=*",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pdok",
+						"nl"
+					],
+					"path": [
+						"bzk",
+						"locatieserver",
+						"search",
+						"v3_1",
+						"lookup"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "gem-dfe54055dcbdbd4afb63e7281f35d792",
+							"description": "id van het object wat je wilt opvragen\n"
+						},
+						{
+							"key": "wt",
+							"value": "json",
+							"description": "bestands formaat\n"
+						},
+						{
+							"key": "fl",
+							"value": "*",
+							"description": "alle velden terug geven die er zijn\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PDOK locatieserver - Free",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=soest&rows=10",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pdok",
+						"nl"
+					],
+					"path": [
+						"bzk",
+						"locatieserver",
+						"search",
+						"v3_1",
+						"free"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "soest"
+						},
+						{
+							"key": "rows",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CBS api - Woningkenmerken en energieverbruik",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://opendata.cbs.nl/ODataApi/odata/81528NED/UntypedDataSet?$filter=((Perioden+eq+'2019JJ00'))+and+((RegioS+eq+'NL01  ')))&$select=Woningkenmerken,+Perioden,+RegioS,+GemiddeldAardgasverbruik_1,+GemiddeldElektriciteitsverbruik_2,+Stadsverwarming_3",
+					"protocol": "https",
+					"host": [
+						"opendata",
+						"cbs",
+						"nl"
+					],
+					"path": [
+						"ODataApi",
+						"odata",
+						"81528NED",
+						"UntypedDataSet"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "((Perioden+eq+'2019JJ00'))+and+((RegioS+eq+'NL01  ')))",
+							"description": "filter voor perioden en regios"
+						},
+						{
+							"key": "$select",
+							"value": "Woningkenmerken,+Perioden,+RegioS,+GemiddeldAardgasverbruik_1,+GemiddeldElektriciteitsverbruik_2,+Stadsverwarming_3",
+							"description": "attributten die we willen opvragen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WFS json request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?service=WFS&request=GetFeature&typename=cbsgebiedsindelingen:cbs_gemeente_2021_gegeneraliseerd&outputFormat=json",
+					"protocol": "https",
+					"host": [
+						"geodata",
+						"nationaalgeoregister",
+						"nl"
+					],
+					"path": [
+						"cbsgebiedsindelingen",
+						"wfs"
+					],
+					"query": [
+						{
+							"key": "service",
+							"value": "WFS"
+						},
+						{
+							"key": "request",
+							"value": "GetFeature"
+						},
+						{
+							"key": "typename",
+							"value": "cbsgebiedsindelingen:cbs_gemeente_2021_gegeneraliseerd"
+						},
+						{
+							"key": "outputFormat",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
