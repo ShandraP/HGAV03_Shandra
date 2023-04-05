@@ -1,4 +1,4 @@
-alert ('Hello, word!');
+//alert ('Hello, word!');
 //console. log('Hello, world!');
 
 let message = 'Hello'
@@ -96,23 +96,23 @@ var map = new maplibregl.Map({
   center: [4.8317337, 52.2446266], // starting position [lng, lat]
   zoom: 3 // starting zoom
 });
-// marker Nieuwveen
-var marker = new maplibregl.Marker()
+// Marker Nieuwveen
+marker = new maplibregl.Marker()
         .setLngLat([4.755741, 52.201008])
         .addTo(map);
 // Marker Purmerend
- var marker = new maplibregl.Marker()
+marker = new maplibregl.Marker()
         .setLngLat([4.956242, 52.506325])
         .addTo(map);
 //Marker Haarlem 
-var marker = new maplibregl.Marker()
+marker = new maplibregl.Marker()
         .setLngLat([4.637727, 52.381466])
         .addTo(map);
 //Marker Amsterdam
-var marker = new maplibregl.Marker()
+marker = new maplibregl.Marker()
         .setLngLat([4.834108, 52.358198])
         .addTo(map); 
-
+//
 
 // Leaflet WMS inladen via GeoServer
 L.tileLayer.wms('http://localhost:8080/geoserver/ows', {
