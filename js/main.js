@@ -44,7 +44,6 @@ require(["esri/config", "esri/WebMap", "esri/views/MapView"], function (esriConf
   esriConfig.apiKey = "AAPKa6565db929d64e039322439e40c6c8cbnrn-rmssR8Bw3uQHVqe1QdsZQVsFMbBGKnRr5dj2efccO_YrPKuw2isBI-E0PLer";
 
   const arcgismap = new WebMap({
-    // basemap: "arcgis-navigation",
     portalItem: {
       id: "aab0ccce23b149de9dfcd64d07939395",
     }
@@ -53,11 +52,38 @@ require(["esri/config", "esri/WebMap", "esri/views/MapView"], function (esriConf
   const view = new MapView({
     container: "arcgismap",
     map: arcgismap,
-    //center: [0, 30],
     zoom: 2
   });
 
 });
+
+
+
+// Maplibre kaart
+var map = new maplibregl.Map({
+  container: 'maplibre',
+  style: 'https://api.maptiler.com/maps/83470e09-666c-4c16-af25-276d9fdcc1ec/style.json?key=wIA2prziu4sAGGyOhl8h',
+  center: [5.222124, 52.371353],
+  zoom: 7
+});
+
+// Marker Nieuwveen
+marker = new maplibregl.Marker()
+  .setLngLat([4.755741, 52.201008])
+  .addTo(map);
+// Marker Purmerend
+marker = new maplibregl.Marker()
+  .setLngLat([4.956242, 52.506325])
+  .addTo(map);
+//Marker Haarlem 
+marker = new maplibregl.Marker()
+  .setLngLat([4.637727, 52.381466])
+  .addTo(map);
+//Marker Amsterdam
+marker = new maplibregl.Marker()
+  .setLngLat([4.834108, 52.358198])
+  .addTo(map);
+
 
 // Leaflet kaart
 var leafletmap = L.map('leafletmap').setView([52.2446266, 4.8317337], 10);
@@ -80,35 +106,10 @@ fetch(mijnEersteAPI, {})
     mijnlaag.addData(geojsonFeature);
   });
 
-// Maplibre kaart
-var map = new maplibregl.Map({
-  container: 'maplibre',
-  style: 'https://api.maptiler.com/maps/83470e09-666c-4c16-af25-276d9fdcc1ec/style.json?key=wIA2prziu4sAGGyOhl8h', // stylesheet location
-  center: [5.222124, 52.371353], // starting position [lng, lat]
-  zoom: 7 // starting zoom
-});
-// Marker Nieuwveen
-marker = new maplibregl.Marker()
-  .setLngLat([4.755741, 52.201008])
-  .addTo(map);
-// Marker Purmerend
-marker = new maplibregl.Marker()
-  .setLngLat([4.956242, 52.506325])
-  .addTo(map);
-//Marker Haarlem 
-marker = new maplibregl.Marker()
-  .setLngLat([4.637727, 52.381466])
-  .addTo(map);
-//Marker Amsterdam
-marker = new maplibregl.Marker()
-  .setLngLat([4.834108, 52.358198])
-  .addTo(map);
-
-
 
 // Leaflet WMS inladen via GeoServer
 L.tileLayer.wms('http://localhost:8080/geoserver/ows', {
-  'layers': 'hgav03:Gemeentes',
+  'layers': 'HGAV03:Gemeentes',
   'styles': 'polygon',
   'srs': 'EPSG:28992',
   'format': 'image/png',

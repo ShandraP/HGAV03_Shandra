@@ -10,7 +10,6 @@ section {
   margin-bottom: 100px;
 }
 
-
 #header {
   height: calc(100vh - 100px);
   width: 100%;
@@ -20,22 +19,23 @@ section {
   position: relative;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 #navigatie {
   font-family: 'Sono', sans-serif;
   padding: 50px;
   padding-right: 5%;
 }
 
+#navigatie ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 #navigatie li {
   display: inline;
   float: right;
+  text-transform: uppercase;
 }
 
 #navigatie a {
@@ -54,7 +54,7 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-
+/* headertext */
 h1 {
   font-family: 'DotGothic16', sans-serif;
   color: white;
@@ -67,28 +67,24 @@ h3 {
   padding: 20px;
 }
 
-
+/* subtitel */
 h2 {
   font-family: 'DotGothic16', sans-serif;
   color: rgb(45, 64, 83);
   font-size: 24px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
 }
 
+/* ondertekst */
 h5 {
   font-family: 'Sono', sans-serif;
 }
-
 
 .ondertekst {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
-#titel1 {
-  padding-left: 80px;
-  padding-bottom: 40px;
-}
-
 
 #openlayersmap {
   margin-left: 100px;
@@ -99,11 +95,6 @@ h5 {
   padding-bottom: 80px;
 
 }
-
-.flourish-embed flourish-globe {
-  width: 100%;
-}
-
 .tweekolom {
   column-count: 2;
   column-width: 50%;
@@ -113,13 +104,7 @@ h5 {
   width: 100%;
 }
 
-.tweekolom2 {
-  column-count: 2;
-  column-width: 50%;
-  padding-bottom: 50px;
-}
-
-.zijtekst2 {
+.flourish-embed flourish-globe {
   width: 100%;
 }
 
@@ -129,13 +114,23 @@ h5 {
   padding-bottom: 80px;
 }
 
-#leafletmap {
-  width: 100%;
-  height: 500px;
-  padding-bottom: 80px;
+.tweekolom2 {
+  column-count: 2;
+  column-width: 50%;
+  padding-bottom: 50px;
 }
 
 #maplibre {
   width: 100%;
   height: 300px;
+}
+
+.zijtekst2 {
+  width: 100%;
+}
+
+#leafletmap {
+  width: 100%;
+  height: 500px;
+  padding-bottom: 80px;
 }
