@@ -1,176 +1,201 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/stylesheet.css">
   <title>Shandra's website</title>
 
-<!--Google font Titel-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <!--Google font Titel-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
-<!--Google font Body-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <!--Google font Body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
-<!--Google font Body2-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+  <!--Google font Body2-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!--OpenLayers-->
-<script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
+  <!--OpenLayers-->
+  <script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
 
- <!--ArcGis-->
-<link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
+  <!--ArcGis-->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
 
-<!--data omzetten-->
-<script src="https://cdn.jsdelivr.net/npm/terraformer"></script>
-<script src="https://unpkg.com/@terraformer/wkt"></script>
+  <!--Data omzetten-->
+  <script src="https://cdn.jsdelivr.net/npm/terraformer"></script>
+  <script src="https://unpkg.com/@terraformer/wkt"></script>
 
-<!--Leaflet-->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-crossorigin=""/>
+  <!--Leaflet-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
 
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
 
-<!--maplibre kaart-->
-<script src='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js'></script>
-<link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
+  <!--Maplibre kaart-->
+  <script src='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js'></script>
+  <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet'>
 
 </head>
+
 <body>
 
-<section id= "header">
-<nav>
-  <ul id="navigatie">
-    <li><a href="">HOME</a></li>
-    <li><a href="">WERELDS</a></li>
-    <li><a href="">MIGRATIE</a></li>
-    <li><a href="">NEDERLAND</a></li>
-</ul>
-</nav>
-  <div id="headertext">
-    <h1>"Maar waar kom je echt vandaan?"</h1>
-    <h3>Het antwoord op de beruchte vraag</h3>
-    <button id="knop1">Let's go </button>
-  </div>
-</section>
+  <section id="header">
+    <nav>
+      <ul id="navigatie">
+        <li><a href="https://images.app.goo.gl/stRmQcExDVhsBC8b9">INFO</a></li>
+        <li><a href="">NEDERLAND</a></li>
+        <li><a href="">MIGRATIE</a></li>
+        <li><a href="">WERELDS</a></li>
+      </ul>
+    </nav>
 
-<section>
-<div class="ondertekst">
-<h5>Hoi, mijn naam is SHANDRA. In mijn leven heb ik een handje vol keer de vraag gekregen: "Waar kom je vandaan?".
-  Ik antwoord dan: "Nederland" maar ik krijg daarna snel de vraag: "Maar waar kom je echt vandaan?" 
-  Ik wist nooit goed hoe ik hierop moest antwoorden.<br>
-  <br>
-  Ik wist wel deels waar mijn grootouders vandaan kwamen
-  maar ik wilde graag precies weten hoe het zat dus heb ik een DNA test gedaan. Misschien vind je dit een 
-  beetje apart maar afkomst is voor veel mensen een belangrijk deel van hun identiteit. Ik wilde dit graag 
-  in kaart brengen en heb daarom deze website gemaakt. Scroll verder voor een stukje van mijn geschiedenis. Veel plezier!
-</h5>
-</div>
-</section>
-
-<section >
-  <div class="titel1">
-  <h2>- - W E R E L D S - -</h2>
-  </div>
-  <div class="ondertekst">
-  <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-    Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-    In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
-  </div>
-<div id="openlayersmap">
-</div>
-<div class="tweekolom">
-<div id="datavis1">
-  <iframe title="Uitslag DNA test" aria-label="Pie Chart" id="datawrapper-chart-kN2XQ" src="https://datawrapper.dwcdn.net/kN2XQ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="420" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-</div>
-<div class="zijtekst">
-  <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-    Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-    In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
-</div>
-</div>
-</section>
-
-
-<section>
-  <div class="titel1">
-    <h2>- - M I G R A T I E - - </h2>
-  </div>
-    <div class="ondertekst">
-      <h5>HIER KOMT MIGRATIE TEKST!!!. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-        Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-        In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
-      </div>
-<div class="tweekolom">
-  <div class="flourish-embed flourish-globe" data-src="visualisation/13159117" data-width="100%"><script src="https://public.flourish.studio/resources/embed.js"></script>
-  </div>
-<div id="arcgismap">
-  </div>
-</div>
-
-<div class="tweekolom">
-  <div class="zijtekst">
-    <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-      Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-      In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
-  </div>
-
-  <div class="zijtekst">
-    <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-      Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-      In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
-  </div>
-</div>
-
-</section>
-
-<section>
-  <div class="titel1">
-  <h2>- - N E D E R L A N D - - </h2>
-</div>
-<div class="ondertekst">
-  <h5>HIER KOMT NEDERLAND TEKST!!!. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-    Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-    In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
-  </div>
-
-  <div class="tweekolom2">
-    <div id='maplibre'></div>
-
-    <div class="zijtekst2">
-      <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-        Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-        In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
+    <div id="headertext">
+      <h1>"Maar waar kom je echt vandaan?"</h1>
+      <h3>Het antwoord op de beruchte vraag</h3>
+      <button id="knop1">Let's go </button>
     </div>
- </div>
+  </section>
 
- <div class="tweekolom2">
-  <div class="zijtekst2">
-    <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen. 
-      Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen. 
-      In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
-  </div>
-  <div id="leafletmap"></div>
-</div>
-</section>
+  <section>
+    <div class="ondertekst">
+      <h5>Hoi, mijn naam is SHANDRA. In mijn leven heb ik een handje vol keer de vraag gekregen: "Waar kom je vandaan?".
+        Ik antwoord dan: "Nederland" maar ik krijg daarna snel de vraag: "Maar waar kom je echt vandaan?"
+        Ik wist nooit goed hoe ik hierop moest antwoorden.<br>
+        <br>
+        Ik wist wel deels waar mijn grootouders vandaan kwamen
+        maar ik wilde graag precies weten hoe het zat dus heb ik een DNA test gedaan. Misschien vind je dit een
+        beetje apart maar afkomst is voor veel mensen een belangrijk deel van hun identiteit. Ik wilde dit graag
+        in kaart brengen en heb daarom deze website gemaakt. Scroll verder voor een stukje van mijn
+        geschiedenis.<br><br>
+        Veel plezier!
+      </h5>
+    </div>
+  </section>
+
+  <section>
+    <div class="titel1">
+      <h2>- - W E R E L D S - -</h2>
+    </div>
+    <div class="ondertekst">
+      <h5>Ik heb een DNA test gedaan bij <a href="https://www.myheritage.nl/">My Heritage.</a> Ik moest een stokje in
+        mijn mond steken en dit opsturen.
+        Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwam. Opvallend
+        is dat veel (delen van) continenten er wel tussen zitten.
+        Noord Amerika, Oceannië en Afrika zitten er niet tussen.
+      </h5>
+    </div>
+    <div id="openlayersmap">
+    </div>
+    
+    <div class="tweekolom">
+      <div id="datavis1">
+        <iframe title="Uitslag DNA test" aria-label="Pie Chart" id="datawrapper-chart-kN2XQ"
+          src="https://datawrapper.dwcdn.net/kN2XQ/1/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="420" data-external="1"></iframe>
+        <script
+          type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();</script>
+      </div>
+      <div class="zijtekst">
+        <h5>In de cirkeldiagram hiernaast is precies te zien uit hoeveel % van elk deel mijn afkomst opgebouwd is. Deze
+          DNA test heeft mij een goed beeld gegeven van mijn afkomst en ook hoe groot/sterk elk deel is. Ik was erg
+          verbaasd over het scandinavische, Italiaanse, en Iberische gedeelte. De rest had ik wel verwacht.
+          Deze DNA test heeft mij veel duidelijkheid gegeven over mijn afkomst. Het brengt goed in beeld hoeveel % van
+          elk deel in mij verwerkt zit. Je zou kunnen zeggen dat dit het antwoord op de vraag is maar nu ben ik
+          natuurlijk benieuwd naar de bron: mijn ouders, hun ouders, hun voorouders. <br> <br> <br> <br>
+          Waar komen zij vandaan en hoe zijn deze resultaten tot stand gekomen? </h5>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="titel1">
+      <h2>- - M I G R A T I E - - </h2>
+    </div>
+    <div class="ondertekst">
+      <h5>Ja, ja, je raad het al. Migratie is (deels) het antwoord op de vraag. Ik ben in gesprek gegaan met mijn opa en
+        oma aan mijn moeders kant. Ik heb gevraagd hoe zij uiteindelijk in Nederland geëindigd zijn, waar kwamen hun
+        ouders vandaan en hoe hebben zij zich verplaatst over de wereld?</h5>
+    </div>
+    <div class="tweekolom">
+      <div class="flourish-embed flourish-globe" data-src="visualisation/13159117" data-width="100%">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+      </div>
+      <div id="arcgismap">
+      </div>
+    </div>
+
+    <div class="tweekolom">
+      <div class="zijtekst">
+        <h5>In deze eerste visualisatie is per grootouder te zien vanuit welk land hun voorouders geëmigreerd zijn. Als
+          op de play knop gedrukt wordt, is te zien voor mijn opa dat zijn voorouders uit China komen.
+          Hij vertelde dat dit zijn moeders kant is. Vanuit China zijn zij naar Indonesië gegaan. Na Indonesië zijn zij
+          geëmigreerd naar Suriname waar hij mijn oma heeft ontmoet.
+          Daarna zijn zij samen naar Nederland geëmigreerd.
+          Bij de dropdown in deze visualisatie kan je wisselen naar mijn oma's kant. Hier is te zien dat haar familie
+          begon in Portugal. Dit is haar moeders kant. Zij zijn daarna ook naar Suriname gegaan. Na het ontmoeten van
+          mijn opa zijn zij in 1975 naar Nederland gekomen.
+          Dit komt omdat Suriname tot 1975 onderdeel van het Nederlands Koninkrijk was. Bij de onafhankelijkheid kregen
+          Surinamers de keuze: blijven of emigreren naar Nederland.
+          Ongeveer 300.000 Surinamers, waaronder mijn opa en oma, besloten een nieuw leven in Nederland op te bouwen <a
+            href="https://methodem.nl/les/2e970079-ce8d-4fbe-a605-9b351f4a954a">(Bron)</a>.
+          Op de rechter visualisatie is het aantal bezoekers per route van verschillende vliegvelden in Suriname naar
+          Nederland te zien. <br> <br> 'Suriname' zou dus ook een antwoord kunnen zijn op de brandende hoofdvraag van
+          deze website. Maar ik ben hekemaal niet geboren in Suriname. Dus wat nu?
+        </h5>
+      </div>
+
+      <div class="zijtekst">
+        <h5> T E S T </h5>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="titel1">
+      <h2>- - N E D E R L A N D - - </h2>
+    </div>
+    <div class="ondertekst">
+      <h5>Nu zijn we uitgekomen bij mijn vaderland: Nederland. Hier zijn beide mijn ouders geboren en ik ook. </h5>
+    </div>
+
+    <div class="tweekolom2">
+      <div id='maplibre'></div>
+
+      <div class="zijtekst2">
+        <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen.
+          Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen.
+          In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
+      </div>
+    </div>
+
+    <div class="tweekolom2">
+      <div class="zijtekst2">
+        <h5>Ik heb een DNA test gedaan bij My Heritage. Ik moest een stokje in mijnn mond steken en dit opsturen.
+          Na een paar weken kreeg ik de uitslag. Op de kaart is te zien welke delen van de wereld hieruit kwamen.
+          In de cirkeldiagram is precies te zien hoeveel % elk deel heeft. </h5>
+      </div>
+      <div id="leafletmap"></div>
+    </div>
+  </section>
 
 
 
 
 
-<script src="https://js.arcgis.com/4.26/"></script>
-<script src="./js/main.js"></script>
+  <script src="https://js.arcgis.com/4.26/"></script>
+  <script src="./js/main.js"></script>
 </body>
+
 </html>

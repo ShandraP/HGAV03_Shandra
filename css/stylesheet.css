@@ -1,26 +1,25 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-section{
+section {
   padding-left: 200px;
   padding-right: 200px;
   margin-bottom: 100px;
- }
-
+}
 
 
 #header {
-    height: calc(100vh - 100px);
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/astronaut.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-  }
-  
+  height: calc(100vh - 100px);
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/astronaut.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -29,13 +28,13 @@ ul {
 }
 
 #navigatie {
-font-family: 'Sono', sans-serif;
-padding: 50px;
-padding-right: 5%;
+  font-family: 'Sono', sans-serif;
+  padding: 50px;
+  padding-right: 5%;
 }
 
 #navigatie li {
-  display:inline;
+  display: inline;
   float: right;
 }
 
@@ -47,95 +46,96 @@ padding-right: 5%;
   text-decoration: none;
 }
 
-#headertext{
-text-align: center;
-position: absolute;
-top: 55%;
-left: 50%;
-transform: translate(-50%, -50%);
-} 
+#headertext {
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
-h1{
+h1 {
   font-family: 'DotGothic16', sans-serif;
   color: white;
   font-size: 40px;
 }
 
-h3{
+h3 {
   font-family: 'Sono', sans-serif;
   color: lightskyblue;
-  padding:20px;
+  padding: 20px;
 }
 
 
-h2{
+h2 {
   font-family: 'DotGothic16', sans-serif;
   color: rgb(45, 64, 83);
   font-size: 24px;
 }
 
-h5{
+h5 {
   font-family: 'Sono', sans-serif;
 }
 
 
-.ondertekst{
-padding-top: 50px;
-padding-bottom: 50px;
+.ondertekst {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-#titel1{
-padding-left: 80px;
-padding-bottom: 40px;
+#titel1 {
+  padding-left: 80px;
+  padding-bottom: 40px;
 }
 
 
-#openlayersmap{
+#openlayersmap {
   margin-left: 100px;
   margin-right: 100px;
   width: 80%;
   display: flex;
   height: 600px;
   padding-bottom: 80px;
-  
+
 }
 
-.flourish-embed flourish-globe{
-width: 100%;
-}
-
-.tweekolom{
-  column-count: 2;
-  column-width: 50%;
- }
-
-.zijtekst{
+.flourish-embed flourish-globe {
   width: 100%;
 }
 
-.tweekolom2{
+.tweekolom {
+  column-count: 2;
+  column-width: 50%;
+}
+
+.zijtekst {
+  width: 100%;
+}
+
+.tweekolom2 {
   column-count: 2;
   column-width: 50%;
   padding-bottom: 50px;
- }
+}
 
-.zijtekst2{
+.zijtekst2 {
   width: 100%;
 }
-#arcgismap{
+
+#arcgismap {
   width: 100%;
   height: 500px;
   padding-bottom: 80px;
 }
 
-#leafletmap{ 
+#leafletmap {
   width: 100%;
   height: 500px;
   padding-bottom: 80px;
- }
+}
 
-#maplibre{
-  width: 100%; 
+#maplibre {
+  width: 100%;
   height: 300px;
 }
