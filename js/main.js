@@ -68,7 +68,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(leafletmap);
 
 
-//leaflet kaart data opvraag 
+//Leaflet kaart data opvraag 
 let mijnlaag = L.geoJSON().addTo(leafletmap);
 const mijnEersteAPI = 'https://api.pdok.nl/bzk/locatieserver/search/v3_1/lookup?id=wpl-76c875f4384f48235cc78e32837648c5&wt=json&fl=*'
 
