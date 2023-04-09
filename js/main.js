@@ -68,30 +68,49 @@ var map = new maplibregl.Map({
 });
 
 // Marker Nieuwveen
+var popup = new maplibregl.Popup({ offset: 25 }).setText(
+  'Mijn gezin en ik.'
+  );
 marker = new maplibregl.Marker()
   .setLngLat([4.755741, 52.201008])
+  .setPopup(popup)
   .addTo(map);
+
 // Marker Purmerend
+var popup = new maplibregl.Popup({ offset: 25 }).setText(
+  'Tante 1.'
+  );
 marker = new maplibregl.Marker()
   .setLngLat([4.956242, 52.506325])
+  .setPopup(popup)
   .addTo(map);
+
 //Marker Haarlem 
+var popup = new maplibregl.Popup({ offset: 25 }).setText(
+  'Tante 2.'
+  );
 marker = new maplibregl.Marker()
   .setLngLat([4.637727, 52.381466])
+  .setPopup(popup)
   .addTo(map);
 //Marker Amsterdam
+var popup = new maplibregl.Popup({ offset: 25 }).setText(
+  'Grootouders.'
+  );
 marker = new maplibregl.Marker()
   .setLngLat([4.834108, 52.358198])
+  .setPopup(popup)
   .addTo(map);
 
 
 // Leaflet kaart
-var leafletmap = L.map('leafletmap').setView([52.2446266, 4.8317337], 10);
+var leafletmap = L.map('leafletmap').setView([52.201008, 4.755741], 10);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
+  maxZoom: 12,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(leafletmap);
+
 
 
 //Leaflet kaart data opvraag 
