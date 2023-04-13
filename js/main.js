@@ -2,7 +2,7 @@
 // openlayers kaart 
 const styleFunction = function (feature) {
   console.log(feature.get('fill'))
-  let fillcolor = feature.get('fill', 'fill-opacity')
+  let fillcolor = feature.get('fill')
   return new ol.style.Style({
     stroke: new ol.style.Stroke({
       color: fillcolor,
@@ -10,7 +10,6 @@ const styleFunction = function (feature) {
     }),
     fill: new ol.style.Fill({
       color: fillcolor,
-      opacity: 0.5
     }),
   });
 };
@@ -110,7 +109,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 12,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(leafletmap);
-
 
 
 //Leaflet kaart data opvraag 

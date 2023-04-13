@@ -163,3 +163,15 @@ h5 {
   height: 400px;
   padding-bottom: 80px;
 }
+
+#footer{
+  height: 150px;
+  padding-top: 50px;
+  padding-left: 974px;
+  padding-right: 200px;
+  background-color:rgb(45, 64, 83);
+}
+
+#footer h1{
+font-size: 14px;
+}
